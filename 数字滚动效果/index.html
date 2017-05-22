@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RunJS 演示代码</title>
+    <style>
+    .textC {
+        display: block;
+    }
+    
+    .textC .li {
+        position: relative;
+        width: 100px;
+        overflow: hidden;
+        margin-top: 10px;
+        line-height: 25px;
+        margin-left: 100px;
+        height: 25px;
+        color: #000;
+    }
+    
+    .textC span {
+        color: #13BEEC;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        position: absolute;
+        top: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="textC">
+            <li class="li li0"></li>
+            <li class="li li1"></li>
+            <li class="li li2"></li>
+            <li class="li li3"></li>
+        </ul>
+    </div>
+</body>
+<script  src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+<script src="NumbersAnimate.js"></script>
+<script>
+NumbersAnimate.lineHeight = 30; //span的高度
+NumbersAnimate.spanWidth = 40; //span的宽度
+NumbersAnimate.spanMargin = 30; //间隔,自己调
+var arr1 = [123, 234, 345, 678];
+scrollNum('.textC', '.li', arr1);
+setInterval(function() {
+    scrollNumChange('.textC', '.li', 100, 999, arr1);
+}, 5000)
+</script>
+
+</html>
