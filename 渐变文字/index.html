@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>延迟加载并渐现内容的jquery插件lazyFade</title>
+    <script class="jquery library" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="lazyFade.js"></script>
+    <script>
+        $(function() {
+            $(".list-group p").lazyFade({
+                reverse: false,
+                duration: 1000,
+                delay: 50,
+                opacity: {
+                    start: 0.01,
+                    end: 1
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <section class="container">
+        <h4>以下内容将延迟加载并渐现</h4> 
+        <div class="list-group">
+            <p>
+                这是一条公告栏信息,这是一条公告栏信息
+            </p>
+            <p>
+                这是一条公告栏信息,这是一条公告栏信息
+            </p>
+            <p>
+                这是一条公告栏信息,这是一条公告栏信息
+            </p>
+            <p>
+                这是一条公告栏信息,这是一条公告栏信息
+            </p>
+            <p>
+                这是一条公告栏信息,这是一条公告栏信息
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
